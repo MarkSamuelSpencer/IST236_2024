@@ -216,6 +216,7 @@ export default function App() {
   function homeScreenHandler() {
     setCurrentPrice(0);
     setCurrentScreen("home");
+    return;
   }
 
   function orderReviewHandler() {
