@@ -1,11 +1,11 @@
 class News {
-  constructor(id, type, title, date, author, agency, imageUrl, description) {
+  constructor(id, type, title, date, author, source, imageUrl, description) {
     this.id = id;
     this.type = type;
     this.title = title;
     this.date = date;
     this.author = author;
-    this.agency = agency;
+    this.source = source;
     this.imageUrl = imageUrl;
     this.description = description;
   }
