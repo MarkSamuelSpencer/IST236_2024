@@ -16,9 +16,10 @@ import {
   Entypo,
   MaterialIcons,
   MaterialCommunityIcons,
-  FontAwesome5
+  FontAwesome5,
 } from "@expo/vector-icons";
 import { useCallback } from "react";
+import BookmarksContextProvider from "./store/context/bookmarks-context";
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -55,19 +56,20 @@ function DrawerNavigator() {
             <Entypo name="list" size={size} color={color} />
           ),
         }}
-      /><Drawer.Screen
-      name="BookmarkedNews"
-      component={BookmarksScreen}
-      options={{
-        title: "Saved Stories",
-        drawerLabel: "Saved Stories",
-        drawerIcon: ({ color, size }) => (
-          <Entypo name="bookmark" size={size} color={color} />
-        ),
-      }}
-    />
-  </Drawer.Navigator>
-);
+      />
+      <Drawer.Screen
+        name="BookmarkedNews"
+        component={BookmarksScreen}
+        options={{
+          title: "Saved Stories",
+          drawerLabel: "Saved Stories",
+          drawerIcon: ({ color, size }) => (
+            <Entypo name="bookmark" size={size} color={color} />
+          ),
+        }}
+      />
+    </Drawer.Navigator>
+  );
 }
 
 function TabsNavigator() {
@@ -87,39 +89,41 @@ function TabsNavigator() {
           backgroundColor: Colors.primary500,
         },
       }}
-    ><Tabs.Screen
-    name="USNews"
-    component={USNewsScreen}
-    options={{
-      headerShown: false,
-      tabBarIcon: ({ color, size }) => (
-        <FontAwesome5 name="flag-usa" size={size} color={color} />
-      ),
-      tabBarLabel: "US News",
-    }}
-  />
-  <Tabs.Screen
-    name="WorldNews"
-    component={WorldNewsScreen}
-    options={{
-      headerShown: false,
-      tabBarIcon: ({ color, size }) => (
-        <Entypo name="globe" size={size} color={color} />
-      ),
-      tabBarLabel: "World News",
-    }}
-  />
-  <Tabs.Screen
-    name="MusicNews"
-    component={MusicNewsScreen}
-    options={{
-      headerShown: false,
-      tabBarIcon: ({ color, size }) => (
-        <FontAwesome5 name="record-vinyl" size={size} color={color} />
-      ),
-      tabBarLabel: "Music News",
-    }}
-  /></Tabs.Navigator>
+    >
+      <Tabs.Screen
+        name="USNews"
+        component={USNewsScreen}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome5 name="flag-usa" size={size} color={color} />
+          ),
+          tabBarLabel: "US News",
+        }}
+      />
+      <Tabs.Screen
+        name="WorldNews"
+        component={WorldNewsScreen}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <Entypo name="globe" size={size} color={color} />
+          ),
+          tabBarLabel: "World News",
+        }}
+      />
+      <Tabs.Screen
+        name="MusicNews"
+        component={MusicNewsScreen}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome5 name="record-vinyl" size={size} color={color} />
+          ),
+          tabBarLabel: "Music News",
+        }}
+      />
+    </Tabs.Navigator>
   );
 }
 
@@ -130,7 +134,6 @@ export default function App() {
     playfairItalic: require("./assets/fonts/PlayfairBoldItalic.ttf"),
     nolluqa: require("./assets/fonts/NolluqaRegular.otf"),
   });
-
 
   const onLayoutRootView = useCallback(async () => {
     if (fonstLoaded || fontError) {
@@ -144,31 +147,33 @@ export default function App() {
     return (
       <>
         <StatusBar style="light" />
-        <NavigationContainer>
-          <Stack.Navigator
-            initialRouteName="DrawerScreen"
-            screenOptions={{
-              headerTintColor: Colors.primary300,
-              headerStyle: { backgroundColor: Colors.primary500 },
-              contentStyle: { backgroundColor: "black" },
-            }}
-          >
-            <Stack.Screen
-              name="DrawerScreen"
-              component={DrawerNavigator}
-              options={{
-                headerShown: false,
+        <BookmarksContextProvider>
+          <NavigationContainer>
+            <Stack.Navigator
+              initialRouteName="DrawerScreen"
+              screenOptions={{
+                headerTintColor: Colors.primary300,
+                headerStyle: { backgroundColor: Colors.primary500 },
+                contentStyle: { backgroundColor: "black" },
               }}
-            />
-            <Stack.Screen
-              name="NewsDetail"
-              component={NewsDetailScreen}
-              options={{
-                headerBackTitleVisible: false,
-              }}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
+            >
+              <Stack.Screen
+                name="DrawerScreen"
+                component={DrawerNavigator}
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name="NewsDetail"
+                component={NewsDetailScreen}
+                options={{
+                  headerBackTitleVisible: false,
+                }}
+              />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </BookmarksContextProvider>
       </>
     );
   }
@@ -177,8 +182,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

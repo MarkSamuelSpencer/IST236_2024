@@ -1,18 +1,31 @@
 import { View, Text, StyleSheet, Image } from "react-native";
-import { useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect, useContext } from "react";
 import { NEWS } from "../data/dummy_data";
 import BookmarkButton from "../components/BookmarkButton";
 import Colors from "../constants/colors";
+import { BookmarksContext } from "../store/context/bookmarks-context";
 
 function NewsDetailScreen(props) {
+  const bookmarkedArticlesCtx = useContext(BookmarksContext);
+
   const newsId = props.route.params.newsId;
   const selectedNews = NEWS.find((news) => news.id === newsId);
 
-  const [pressed, setPressed] = useState(false);
+  const articleIsBookmarked = bookmarkedArticlesCtx.ids.includes(newsId);
 
-  function headerButtonPressHandler() {
-    setPressed(!pressed);
+  function changeBookmarkStatusHandler() {
+    if (articleIsBookmarked) {
+      bookmarkedArticlesCtx.removeFavorite(newsId);
+    } else {
+      bookmarkedArticlesCtx.addFavorite(newsId);
+    }
   }
+
+  // const [pressed, setPressed] = useState(false);
+
+  // function headerButtonPressHandler() {
+  //   setPressed(!pressed);
+  // }
 
   useLayoutEffect(() => {
     props.navigation.setOptions({
@@ -20,40 +33,27 @@ function NewsDetailScreen(props) {
       headerRight: () => {
         return (
           <BookmarkButton
-            pressed={pressed}
-            onPress={headerButtonPressHandler}
+            pressed={articleIsBookmarked}
+            onPress={changeBookmarkStatusHandler}
           />
         );
       },
     });
-  }, [props.navigation, headerButtonPressHandler]);
+  }, [props.navigation, changeBookmarkStatusHandler]);
 
   return (
     <View style={styles.rootContainer}>
       <View style={styles.imageContainer}>
-        <Image
-          style={styles.image}
-          source={{ uri: selectedNews.imageUrl }}
-        />
+        <Image style={styles.image} source={{ uri: selectedNews.imageUrl }} />
       </View>
 
       <View style={styles.infoContainer}>
-        <Text style={styles.title}>
-          {selectedNews.title}
-        </Text>
-        <Text style={styles.date}>
-          {selectedNews.date}
-        </Text>
-        <Text style={styles.author}>
-          By {selectedNews.author}
-        </Text>
-        <Text style={styles.source}>
-          Source: {selectedNews.source}
-        </Text>
+        <Text style={styles.title}>{selectedNews.title}</Text>
+        <Text style={styles.date}>{selectedNews.date}</Text>
+        <Text style={styles.author}>By {selectedNews.author}</Text>
+        <Text style={styles.source}>Source: {selectedNews.source}</Text>
 
-        <Text style={styles.description}>
-          {selectedNews.description}
-        </Text>
+        <Text style={styles.description}>{selectedNews.description}</Text>
       </View>
     </View>
   );
@@ -110,5 +110,5 @@ const styles = StyleSheet.create({
     textAlign: "justify",
     fontSize: 15,
     fontFamily: "playfair",
-  }
+  },
 });
