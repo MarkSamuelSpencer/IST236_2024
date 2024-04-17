@@ -1,0 +1,151 @@
+<mxfile host="app.diagrams.net" modified="2024-04-02T03:33:13.857Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="MXcPXsWsce4c6omYdi3c" version="24.2.0" type="device">
+  <diagram name="Page-1" id="bU1VFHXxOLSUdz0x0VgF">
+    <mxGraphModel dx="932" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="11KEyasD4h4iG8BKQlgR-5" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="240" width="200" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-1" value="Background Image" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="240" width="200" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-2" value="Home Screen" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" y="210" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-3" value="App Title" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="270" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-4" value="Status Bar" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="250" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-6" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="680" width="200" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-7" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="680" width="200" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-8" value="Meditation Task" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="310" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-9" value="Meditation Task" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="380" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-10" value="Meditation Task" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="440" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-11" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="540" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-12" value="Tabs Navigator" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="445" y="510" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-13" value="All" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="405" y="550" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-14" value="Morning" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="550" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-15" value="Sleep" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="550" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-16" value="Focus" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="550" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-18" value="Meditations Screen" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="435" y="210" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-21" value="Hello,&amp;nbsp;&lt;div&gt;{user}&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-22" value="Start Now &amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="535" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-23" value="Meditation Player Screen" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="650" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-24" value="Breath Timer Gif" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="110" y="730" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-25" value="Meditation Name" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="690" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-27" value="Play/Stop" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="150" y="960" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-28" value="Current Time" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="880" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-29" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="680" width="200" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-30" value="Drawer Menu" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="410" y="650" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-31" value="Breath Timer Gif" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="390" y="730" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-32" value="Meditation Name" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="690" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-33" value="Play/Stop" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="430" y="950" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-34" value="Current Time" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="890" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-35" value="Drawer Menu" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="680" width="150" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-36" value="Favorites Screen" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="685" y="650" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-37" value="Title" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="690" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-39" value="Meditation Task" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="730" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-40" value="Meditation Task" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="790" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-41" value="Meditation Task" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="850" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-42" value="Volume Slider" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="930" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-44" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="240" width="200" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-45" value="Progress Tracking Screen" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="700" y="210" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-46" value="Calendar" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="260" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-47" value="Statistics, level" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="380" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-48" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="540" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-49" value="Tabs Navigator" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="725" y="510" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-50" value="All" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="685" y="550" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-51" value="Morning" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="550" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-52" value="Sleep" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="550" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11KEyasD4h4iG8BKQlgR-53" value="Focus" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="550" width="40" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
