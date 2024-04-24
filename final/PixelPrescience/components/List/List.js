@@ -1,7 +1,10 @@
 import { View, StyleSheet, FlatList } from "react-native";
 import MeditationItem from "./MeditationItem";
+import Colors from "../../constants/colors";
 
+// List component to display meditation items
 function List(props) {
+  // render each meditation item
   function renderMeditationItem(itemData) {
     const meditationItemProps = {
       id: itemData.item.id,
@@ -13,6 +16,8 @@ function List(props) {
     };
     return <MeditationItem {...meditationItemProps} />;
   }
+  
+  // render list of meditation items
   return (
     <View style={styles.container}>
       <FlatList
@@ -31,6 +36,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: "black",
+    backgroundColor: Colors.accent500,
   },
 });

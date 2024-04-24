@@ -11,69 +11,68 @@ import FavoritesScreen from "./screens/FavoritesScreen";
 import MorningScreen from "./screens/MorningScreen";
 import SleepScreen from "./screens/SleepScreen";
 import FocusScreen from "./screens/FocusScreen";
+import HomeScreen from "./screens/Homescreen";
 import MeditationPlayerScreen from "./screens/MeditationPlayerScreen";
 
-import {
-  Entypo,
-  MaterialIcons,
-  MaterialCommunityIcons,
-  FontAwesome5,
-} from "@expo/vector-icons";
+import { Entypo, Feather } from "@expo/vector-icons";
 import { useCallback } from "react";
-import FavoritesContextProvider from "./store/context/favorites-context";
+import { Provider } from "react-redux";
+import { store } from "./store/redux/store";
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 const Tabs = createBottomTabNavigator();
 
 function DrawerNavigator() {
+  // Drawer navigation
   return (
-  <Drawer.Navigator
-    initialRouteName="MeditationItems"
-    screenOptions={{
-      headerStyle: { backgroundColor: Colors.primary500 },
-      headerTintColor: "white",
-      headerTitleStyle: {
-        fontFamily: "rainyhearts",
-        fontSize: 40,
-        color: Colors.accent800,
-      },
-      sceneContainerStyle: {
-        backgroundColor: Colors.accent800,
-      },
-      drawerContentStyle: { backgroundColor: Colors.primary500 },
-      drawerInactiveTintColor: Colors.primary300,
-      drawerActiveTintColor: Colors.accent500,
-      drawerActiveBackgroundColor: Colors.primary800,
-    }}
-  >
-    <Drawer.Screen
-      name="MeditationItems"
-      component={TabsNavigator}
-      options={{
-        title: "Meditations",
-        drawerLabel: "Meditations",
-        drawerIcon: ({ color, size }) => (
-          <Entypo name="list" size={size} color={color} />
-        ),
+    <Drawer.Navigator
+      initialRouteName="MeditationItems"
+      screenOptions={{
+        headerStyle: { backgroundColor: Colors.primary500 },
+        headerTintColor: "white",
+        headerTitleStyle: {
+          fontFamily: "rainyhearts",
+          fontSize: 40,
+          color: Colors.accent800,
+        },
+        sceneContainerStyle: {
+          backgroundColor: Colors.accent800,
+        },
+        drawerContentStyle: { backgroundColor: Colors.primary500 },
+        drawerInactiveTintColor: Colors.primary300,
+        drawerActiveTintColor: Colors.accent500,
+        drawerActiveBackgroundColor: Colors.primary800,
       }}
-    />
-    <Drawer.Screen
-      name="Favorites"
-      component={FavoritesScreen}
-      options={{
-        title: "Favorites",
-        drawerLabel: "Favorites",
-        drawerIcon: ({ color, size }) => (
-          <Entypo name="bookmark" size={size} color={color} />
-        ),
-      }}
-    />
-  </Drawer.Navigator>
+    >
+      <Drawer.Screen
+        name="MeditationItems"
+        component={TabsNavigator}
+        options={{
+          title: "Meditations",
+          drawerLabel: "Meditations",
+          drawerIcon: ({ color, size }) => (
+            <Entypo name="list" size={size} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Favorites"
+        component={FavoritesScreen}
+        options={{
+          title: "Favorites",
+          drawerLabel: "Favorites",
+          drawerIcon: ({ color, size }) => (
+            <Entypo name="bookmark" size={size} color={color} />
+          ),
+        }}
+      />
+    </Drawer.Navigator>
   );
 }
 
 function TabsNavigator() {
+  // Bottom tab navigation
   return (
     <Tabs.Navigator
       screenOptions={{
@@ -97,7 +96,7 @@ function TabsNavigator() {
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="flag-usa" size={size} color={color} />
+            <Feather name="sun" size={size} color={color} />
           ),
           tabBarLabel: "Morning",
         }}
@@ -108,7 +107,7 @@ function TabsNavigator() {
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
-            <Entypo name="globe" size={size} color={color} />
+            <Feather name="moon" size={size} color={color} />
           ),
           tabBarLabel: "Sleep",
         }}
@@ -119,7 +118,7 @@ function TabsNavigator() {
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="record-vinyl" size={size} color={color} />
+            <Entypo name="magnifying-glass" size={size} color={color} />
           ),
           tabBarLabel: "Focus",
         }}
@@ -128,7 +127,9 @@ function TabsNavigator() {
   );
 }
 
+// main app component
 export default function App() {
+  // load and wait for fonts
   const [fontsLoaded, fontError] = useFonts({
     rainyhearts: require("./assets/fonts/rainyhearts.ttf"),
   });
@@ -145,16 +146,26 @@ export default function App() {
     return (
       <>
         <StatusBar style="auto" />
-        <FavoritesContextProvider>
+        <Provider store={store}>
+          {/* initialize NavigationContainer */}
+
           <NavigationContainer>
+            {/* define stack navigation */}
             <Stack.Navigator
-              initialRouteName="DrawerScreen"
+              initialRouteName="HomeScreen"
               screenOptions={{
                 headerTintColor: Colors.primary300,
                 headerStyle: { backgroundColor: Colors.primary500 },
                 contentStyle: { backgroundColor: "white" },
               }}
             >
+              <Stack.Screen
+                name="HomeScreen"
+                component={HomeScreen}
+                options={{
+                  headerShown: false,
+                }}
+              />
               <Stack.Screen
                 name="DrawerScreen"
                 component={DrawerNavigator}
@@ -171,7 +182,7 @@ export default function App() {
               />
             </Stack.Navigator>
           </NavigationContainer>
-        </FavoritesContextProvider>
+        </Provider>
       </>
     );
   }

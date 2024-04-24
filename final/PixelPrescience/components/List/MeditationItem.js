@@ -2,25 +2,31 @@ import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Colors from "../../constants/colors";
 
+// Meditation item component
 function MeditationItem(props) {
   const navigation = useNavigation();
 
+  // navigate to meditation player screen when item is pressed
   function selectedMeditationHandler() {
     navigation.navigate("MeditationPlayer", {
       meditationId: props.id,
     });
   }
+  
+  // render meditation item
   return (
     <View
       style={[
         styles.itemContainer,
-        { backgroundColor: props.listIndex % 2 == 0 ? "#ccc" : "#fff" },
+        { backgroundColor: props.listIndex % 2 === 0 ? "#ccc" : "#fff" },
       ]}
     >
       <Pressable onPress={selectedMeditationHandler}>
+        {/* display meditation image */}
         <View style={styles.imageContainer}>
           <Image style={styles.image} source={{ uri: props.imageUrl }} />
         </View>
+        {/* display meditation title */}
         <View style={styles.infoContainer}>
           <Text style={styles.title}>{props.title}</Text>
         </View>
@@ -56,16 +62,5 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontFamily: "rainyhearts",
     paddingBottom: 5,
-  },
-  data: {
-    textAlign: "center",
-    width: "100%",
-    fontSize: 15,
-    fontFamily: "rainyhearts",
-    paddingBottom: 5,
-  },
-  description: {
-    fontSize: 16,
-    textAlign: "center",
   },
 });

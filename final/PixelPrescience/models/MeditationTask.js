@@ -1,10 +1,11 @@
 class Task {
-    constructor(id, type, title, imageUrl, description) {
+    constructor(id, type, title, imageUrl, description, internal) {
         this.id = id;
         this.type = type;
         this.title = title;
         this.imageUrl = imageUrl;
         this.description = description
+        this.internal = internal
     }
 
     toString() {
