@@ -23,6 +23,7 @@ function FavoritesScreen() {
     );
   }
 
+  // list favorited meditations
   return <List items={favoritedMeditations} />;
 }
 
